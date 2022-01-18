@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #DCD8ED;
+    
+
+}
+
+
+
+.tarjeta{
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    perspective: 800px;
+    text-align: center;
+    animation-name: ingreso-tarjetas;
+    animation-duration:  1s;
+
+    
+
+}
+
+.tarjeta:hover .lado-A{
+    transform: rotateY(180deg);
+}
+
+.tarjeta:hover .lado-B{
+    transform: rotateY(360deg);
+}
+
+[class*=lado]{
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    border-radius: .5rem;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform .5s ;
+
+}
+
+.lado-A {
+    background-color: #F4A6B8;
+ 
+}
+
+.lado-B {
+    background-color: #ABD7C4;
+    transform: rotateY(180deg); }  
+    
+@keyframes ingreso-tarjetas {
+    0%{
+        transform: rotateY(80deg);
+
+    }
+    100%{
+
+    }
+    
+}
